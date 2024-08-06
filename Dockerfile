@@ -14,8 +14,8 @@ RUN echo "systemProp.http.proxyHost=krmp-proxy.9rum.cc\nsystemProp.http.proxyPor
 # gradlew를 이용한 프로젝트 필드
 RUN ./gradlew clean build
 
-# DATABASE_URL을 환경 변수로 삽입
-ENV DATABASE_URL=jdbc:mysql://mysql/krampoline
+# Set environment variables
+ENV DATABASE_URL=jdbc:mysql://pickup-mysql-dev/pickup
 
 # Step 7: Set the working directory
 WORKDIR /app
